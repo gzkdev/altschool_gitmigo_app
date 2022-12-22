@@ -1,9 +1,10 @@
 import React from "react";
+import Form from "../components/Form";
 
 const HomePage = () => {
   return (
     <div className="App">
-      <h1>Vite + React</h1>
+      <Form />
     </div>
   );
 };
