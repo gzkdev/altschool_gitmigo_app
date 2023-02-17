@@ -1,15 +1,15 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ErrorBoundary from "./components/ErrorBoundary";
-import HomePage from "./pages/HomePage";
-import ProfilePage from "./pages/ProfilePage";
+import Home from "./pages/home";
+import Profile from "./pages/profile";
 
 function App() {
   return (
     <ErrorBoundary>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/:username" element={<ProfilePage />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/:username" element={<Profile />} />
         </Routes>
       </BrowserRouter>
     </ErrorBoundary>

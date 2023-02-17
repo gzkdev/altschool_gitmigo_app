@@ -1,7 +1,7 @@
 import React from "react";
-import Form from "../components/Form";
+import Form from "../../components/Form";
 
-const HomePage = () => {
+const Home = () => {
   return (
     <div className="App">
       <Form />
@@ -9,4 +9,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Home;
