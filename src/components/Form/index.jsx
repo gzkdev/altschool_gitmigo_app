@@ -1,12 +1,17 @@
 import React from "react";
 import styles from "./Form.module.css";
+import useSearchProfile from "./useSearchProfile";
 
 const Form = () => {
+  const { username, handleInputUsername, handleSearchUsername } =
+    useSearchProfile();
   return (
-    <form className={styles.form}>
+    <form className={styles.form} onSubmit={handleSearchUsername}>
       <div className={styles.formThumbnail}></div>
       <input
         className={styles.formInput}
+        value={username}
+        onChange={handleInputUsername}
         autoComplete="off"
         type="search"
         name="search"
