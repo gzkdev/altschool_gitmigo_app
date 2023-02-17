@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Form.module.css";
+import styles from "./SearchForm.module.css";
 import useSearchProfile from "./useSearchProfile";
 
 const Form = () => {

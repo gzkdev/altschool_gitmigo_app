@@ -1,11 +1,11 @@
 import React from "react";
-import Form from "../../components/Form";
+import SearchForm from "../../components/SearchForm";
 import HomePageLayout from "../../components/HomePageLayout";
 
 const Home = () => {
   return (
     <HomePageLayout>
-      <Form />
+      <SearchForm />
     </HomePageLayout>
   );
 };
