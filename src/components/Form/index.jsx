@@ -1,15 +1,21 @@
 import React from "react";
+import styles from "./Form.module.css";
 
 const Form = () => {
   return (
-    <form>
+    <form className={styles.form}>
+      <div className={styles.formThumbnail}></div>
       <input
+        className={styles.formInput}
+        autoComplete="off"
         type="search"
         name="search"
         id="search"
         placeholder="Enter username"
       />
-      <button type="submit">Find Profile</button>
+      <button className={styles.formButton} type="submit">
+        Search
+      </button>
     </form>
   );
 };
