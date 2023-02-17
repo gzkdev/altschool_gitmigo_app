@@ -1,11 +1,12 @@
 import React from "react";
 import Form from "../../components/Form";
+import HomePageLayout from "../../components/HomePageLayout";
 
 const Home = () => {
   return (
-    <div className="App">
+    <HomePageLayout>
       <Form />
-    </div>
+    </HomePageLayout>
   );
 };
 
