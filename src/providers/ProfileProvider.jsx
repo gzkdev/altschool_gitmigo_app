@@ -1,11 +1,9 @@
-import React from "react";
 import useSWR from "swr";
 import { useContext, createContext } from "react";
 import { useParams } from "react-router-dom";
+import fetcher from "../utils/fetcher";
 
 const ProfileContext = createContext();
-
-const fetcher = (val) => fetch(val).then((res) => res.json());
 
 export const useProfileContext = () => {
   const store = useContext(ProfileContext);
