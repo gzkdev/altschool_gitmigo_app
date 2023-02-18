@@ -1,9 +1,16 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import ProfileCard from "../../components/ProfileCard";
+import ProfilePageLayout from "../../components/ProfilePageLayout";
+import ProfileProvider from "../../providers/ProfileProvider";
 
 const Profile = () => {
-  const { username } = useParams();
-  return <div>Hey, {username}</div>;
+  return (
+    <ProfileProvider>
+      <ProfilePageLayout>
+        <ProfileCard />
+      </ProfilePageLayout>
+    </ProfileProvider>
+  );
 };
 
 export default Profile;

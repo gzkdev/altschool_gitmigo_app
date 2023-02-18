@@ -1,0 +1,93 @@
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ebebeb;
+}
+
+.card {
+  position: relative;
+  width: 90%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 24px;
+  background-color: #fff;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+
+.card [data-back-link] {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  color: inherit;
+  text-decoration: underline;
+}
+
+.cardThumbnail {
+  --scale: 140px;
+  height: var(--scale);
+  width: var(--scale);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  overflow: hidden;
+}
+
+.cardThumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card [data-name] {
+  font-size: 20px;
+  font-weight: 900;
+  margin: 16px 0 0;
+}
+
+.card [data-username] {
+  opacity: 0.5;
+  font-weight: 600;
+}
+
+.table {
+  width: min(80%, 180px);
+  display: grid;
+  margin: 16px 0;
+  gap: 8px;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardLink {
+  display: flex;
+  width: 60%;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  padding: 8px 16px;
+  background-color: #141414;
+  color: #fff;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+}
