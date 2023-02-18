@@ -1,7 +1,41 @@
-import React from "react";
+import { Link } from "react-router-dom";
+import { useRepositoriesContext } from "../../providers/RepositoriesProvider";
+import styles from "./RepositoriesList.module.css";
 
 const RepositoriesList = () => {
-  return <div>RepositoriesList</div>;
+  const { data, error, isLoading } = useRepositoriesContext();
+  console.log(data);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  return (
+    <div className={styles.container}>
+      <div className={styles.wrapper}>
+        <div className={styles.header}>Public Repos</div>
+        <ul className={styles.list}>
+          {data.map((repo, _) => (
+            <li className={styles.item} key={repo.id}>
+              <Link to="#">
+                <div data-name>{repo.name}</div>
+                <div data-description></div>
+                <div className={styles.table}>
+                  <div className={styles.col}>
+                    Stars {repo.stargazers_count}
+                  </div>
+                  <div className={styles.col}>Forks {repo.forks_count}</div>
+                  <div className={styles.col}>
+                    Watchers {repo.watchers_count}
+                  </div>
+                </div>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
 };
 
 export default RepositoriesList;

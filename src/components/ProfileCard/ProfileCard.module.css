@@ -1,9 +1,11 @@
 .container {
   height: 100%;
+  padding: 40px 0;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #ebebeb;
+  z-index: 20;
 }
 
 .card {
@@ -64,7 +66,7 @@
 .table {
   width: min(80%, 180px);
   display: grid;
-  margin: 16px 0;
+  margin: 16px 0 32px;
   gap: 8px;
 }
 
@@ -85,9 +87,25 @@
   padding: 8px 16px;
   background-color: #141414;
   color: #fff;
-  border-radius: 40px;
-  -webkit-border-radius: 40px;
-  -moz-border-radius: 40px;
-  -ms-border-radius: 40px;
-  -o-border-radius: 40px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  transition: 200ms;
+  -webkit-transition: 200ms;
+  -moz-transition: 200ms;
+  -ms-transition: 200ms;
+  -o-transition: 200ms;
+}
+
+.cardLink:hover {
+  opacity: 0.8;
+}
+
+@media (min-width: 900px) {
+  .container {
+    position: sticky;
+    align-items: flex-start;
+  }
 }
